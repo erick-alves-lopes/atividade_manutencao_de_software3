@@ -41,3 +41,24 @@ h2 {
   border-radius: 8px;
   background-color: #b2dfdb; /* Fundo suave em tom de verde água */
 }
+
+label {
+  display: inline-block;
+  width: 120px;
+  color: #00796b; /* Verde escuro para os rótulos */
+}
+
+input[type="text"],
+select {
+  width: calc(100% - 130px);
+  padding: 10px;
+  border: 1px solid #00796b; /* Bordas do campo de texto em verde escuro */
+  border-radius: 8px;
+  background-color: #e0f2f1; /* Fundo suave no campo de entrada */
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #004d40; /* Realce da borda ao focar */
+  outline: none;
+}
