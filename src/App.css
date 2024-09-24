@@ -62,3 +62,17 @@ select:focus {
   border-color: #004d40; /* Realce da borda ao focar */
   outline: none;
 }
+
+button {
+  background-color: #004d40; /* Verde escuro */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #00251a; /* Verde muito escuro */
+}
