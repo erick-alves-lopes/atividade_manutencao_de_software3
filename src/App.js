@@ -41,6 +41,24 @@ function App() {
     setTempo(''); // Limpa o campo de atividade após adicionar
   };
 
+  const removerAtividade = (dia, periodo) => {
+    setEstudos(prevEstudos => ({
+      ...prevEstudos,
+      [dia]: {
+        ...prevEstudos[dia],
+        [periodo]: '',
+      },
+    }));
+
+    setAnotacao(prevAnotacao => ({
+      ...prevAnotacao,
+      [dia]: {
+        ...prevAnotacao[dia],
+        [periodo]: false, 
+      }
+    }));
+  };
+
   return (
     <div className="app-container">
       <h1>Gerenciador de Estudos 2024</h1>
@@ -89,6 +107,7 @@ function App() {
               {estudos[dia][periodo]}
               {estudos[dia][periodo] && (
                 <>
+                  <button onClick={() => removerAtividade(dia, periodo)}>-</button>
                   {anotacao[dia] && anotacao[dia][periodo] && (
                     <div>
                       <input type="text" placeholder="Tópicos específicos; Pontos a revisar; Referências bibliográficas." />
